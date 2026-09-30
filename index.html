@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My First Website</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #18243a; background: #edf3fb; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; }
+    main { width: min(90vw, 560px); padding: 36px; background: white; border-radius: 20px;
+           box-shadow: 0 12px 40px #28416a22; }
+    h1 { margin-top: 0; color: #2463c5; }
+    p { line-height: 1.7; }
+    button { border: 0; border-radius: 10px; padding: 12px 18px; color: white;
+             background: #2463c5; cursor: pointer; font-size: 16px; }
+    button:hover { background: #174a99; }
+    #message { min-height: 1.7em; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Hello, world! This is my website.</h1>
+    <p>I published this little experiment with GitHub Pages. Try changing the text, colors, and button behavior.</p>
+    <button id="helloButton" type="button">Click me</button>
+    <p id="message" aria-live="polite"></p>
+  </main>
+  <script>
+    const button = document.querySelector('#helloButton');
+    const message = document.querySelector('#message');
+    button.addEventListener('click', () => {
+      message.textContent = 'It works! I made this website.';
+    });
+  </script>
+</body>
+</html>
